@@ -1,0 +1,13 @@
+.your-character-space {
+  height: 70px;
+}
+
+h2{
+  font-size: 30px;
+}
+
+.auth-image {
+  height: 80px;
+  border: solid black 2px;
+  margin: 1px;
+}
