@@ -54,9 +54,33 @@ $(document).ready(function() {
   };
 
   //fight
-  function fight(){
+  function fight() {
     var yourNewHelth = characters[yourCharacter].health - characters[defenerCharacter].attack
 
+    //get your helth span tag
+    var yourHealthSpan = $("#your-character-section").find('.health');
+
+    //decrease health on screen
+    yourHealthSpan.text(yourNewHelth);
+
+    //decrease health
+    characters[yourCharacter].health = yourNewHelth;
+
+    //increase attack
+    characters[yourCharacter].attack = characters[yourCharacter].attack * 2;
+
+    console.log(characters[yourCharacter].health);
+
+    //enemy new  health
+    var enemyNewHealth = characters[defenerCharacter].health - characters[yourCharacter].attack
+
+    console.log(enemyNewHealth);
+    //get enemy health span tag
+    var enemyHealthSpan = $("#defender-section").find('.health');
+
+    enemyHealthSpan.text(enemyNewHealth);
+
+    characters[defenerCharacter].health = enemyNewHealth;
 
   }
 
@@ -110,7 +134,7 @@ $(document).ready(function() {
       //log your character
       yourCharacter = $("#your-character-section").find('img').attr('id');
 
-      //defender charaacter is the same as
+      //defender character is the same as
       defenerCharacter = $("#defender-section").find('img').attr('id');
 
       console.log(characters[yourCharacter].attack);
