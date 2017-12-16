@@ -1,6 +1,30 @@
 $(document).ready(function() {
-  var defender, defenderFull = false, characterSelect = false;
-  // var characterPowers
+  var defender, defenderFull = false,
+    characterSelect = false;
+  var characters = {
+    "ryu": {
+      "attack": 30,
+      "health": 100
+    },
+    "kenMasters": {
+      "attack": 25,
+      "health": 140
+    },
+    "chunLi": {
+      "attack": 20,
+      "health": 170
+    },
+    "dhalsim": {
+      "attack": 35,
+      "health": 120
+    }
+  };
+
+  //init character variables
+  var yourCharacter, defenerCharacter;
+
+  //testing the powers
+  // console.log(characterPowers.ryu.attack);
 
   // move to Enemies section
   function moveToEnemies() {
@@ -28,6 +52,13 @@ $(document).ready(function() {
     image.remove();
     $("#defender-section").append(image);
   };
+
+  //fight
+  function fight(){
+    var yourNewHelth = characters[yourCharacter].health - characters[defenerCharacter].attack
+
+
+  }
 
   // your player image click
   function imageClick() {
@@ -71,13 +102,27 @@ $(document).ready(function() {
   EnableClickEvent();
 
   //attack button click
-  $("#attack-button").on("click", function(){
+  $("#attack-button").on("click", function() {
 
     //check to see if chosen character and defener have been seleted
+    if (defenderFull === true || characterSelect === true) {
 
-      //run some function that attacks
+      //log your character
+      yourCharacter = $("#your-character-section").find('img').attr('id');
 
-      //
+      //defender charaacter is the same as
+      defenerCharacter = $("#defender-section").find('img').attr('id');
+
+      console.log(characters[yourCharacter].attack);
+
+      //fight
+      fight()
+
+    }
+
+
+
+    //
   });
 
 
