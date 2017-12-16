@@ -2,6 +2,13 @@
   /*height: 120px;*/
 }
 
+body {
+  /* background: "https://www.google.com/url?sa=i&rct=j&q=&esrc=s&source=images&cd=&cad=rja&uact=8&ved=0ahUKEwig0pKw2o7YAhUSfiYKHd_6Bm0QjRwIBw&url=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3DtEA-kf9utek&psig=AOvVaw25DAsM_6j87WH4j3kR6yzl&ust=1513519690236704"; */
+  background-image: url("https://i.ytimg.com/vi/tEA-kf9utek/maxresdefault.jpg");
+  background-size: cover;
+  /* backg */
+}
+
 h2{
   font-size: 30px;
 }
@@ -24,4 +31,12 @@ p{
 
 .images {
   max-width: 150px;
+}
+
+p, h2 {
+    background-color: White;
+}
+
+h1 {
+  color: White
 }

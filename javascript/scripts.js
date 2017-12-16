@@ -85,11 +85,17 @@ $(document).ready(function() {
   }
 
   function defeatEnemy(){
-    //remove enemy application
-    var enemyDefeted = $(".defenter-section").find(".auth-image")
-    console.log(enemyDefeted.attr('class'));
+    //find enemy
+    var enemyDefeted = $("#defender-section").find('.images')
+
+    console.log(enemyDefeted.attr('.images'));
+
     enemyDefeted.remove();
+
     EnableClickEvent();
+
+    //enable defender selection
+    defenderFull = false;
   }
 
   // your player image click
