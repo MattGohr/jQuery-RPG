@@ -84,6 +84,14 @@ $(document).ready(function() {
 
   }
 
+  function defeatEnemy(){
+    //remove enemy application
+    var enemyDefeted = $(".defenter-section").find(".auth-image")
+    console.log(enemyDefeted.attr('class'));
+    enemyDefeted.remove();
+    EnableClickEvent();
+  }
+
   // your player image click
   function imageClick() {
     console.log("imageclick");
@@ -141,6 +149,12 @@ $(document).ready(function() {
 
       //fight
       fight()
+
+      //check to see if wone
+      if (characters[defenerCharacter].health < 0){
+        console.log("defeted");
+        defeatEnemy();
+      }
 
     }
 
